@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:smarthome/app/modules/home/views/_view.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -13,12 +14,7 @@ class HomeView extends GetView<HomeController> {
         title: const Text('HomeView'),
         centerTitle: true,
       ),
-      body: Center(
-        child: Text(
-          'HomeView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+      body: const HouseView(),
     );
   }
 }
