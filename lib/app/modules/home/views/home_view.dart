@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:smarthome/app/modules/home/views/_view.dart';
+import 'package:smarthome/app/modules/home/views/startview.dart';
 
 import '../controllers/home_controller.dart';
 
