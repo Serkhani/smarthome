@@ -9,13 +9,14 @@ class MasterRoomClipper extends CustomClipper<Path> {
     path0.lineTo(size.width * 0.145, size.height * 1.04);
     path0.lineTo(size.width * 0.485, size.height * 1.04);
     path0.lineTo(size.width * 0.485, size.height * 0.860);
-    path0.lineTo(size.width * 0.552, size.height * 0.860);
+    // path0.lineTo(size.width * 0.552, size.height * 0.860);
 
     // Path path1 = Path();
-    path0.lineTo(size.width * 0.402, size.height * 0.70);
-    path0.lineTo(size.width * 0.635, size.height * 0.70);
+    // path0.lineTo(size.width * 0.402, size.height * 0.70);
+    // path0.lineTo(size.width * 0.635, size.height * 0.70);
     path0.lineTo(size.width * 0.635, size.height * 0.86);
-    path0.lineTo(size.width * 0.602, size.height * 0.86);
+    path0.lineTo(size.width * 0.635, size.height * 0.70);
+    // path0.lineTo(size.width * 0.602, size.height * 0.86);
     return path0;
   }
 
