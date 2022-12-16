@@ -8,7 +8,7 @@ import '../../../data/painter/livingroompainter.dart';
 import '../../../data/painter/masterbathpainter.dart';
 import '../../../data/painter/masterroompainter.dart';
 import '../../../data/painter/middlerightrbrbmaster.dart';
-import '../../../data/painter/porchpainter.dart';
+import '../../../data/painter/startuppainter.dart';
 import '../../../data/painter/rightporchpainter.dart';
 import '../../../data/painter/topleftroompainter.dart';
 import '../../../data/painter/toprightroompainter.dart';
@@ -23,7 +23,7 @@ class HouseView extends GetView<HomeController> {
         constraints: const BoxConstraints.expand(),
         child: CustomPaint(
           size: const Size(240.0, 360.0),
-          painter: PorchPainter(),
+          painter: StartUpPainter(),
         ),
       ),
     );

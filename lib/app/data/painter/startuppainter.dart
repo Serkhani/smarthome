@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class PorchPainter extends CustomPainter {
+class StartUpPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     Paint paint0 = Paint()
