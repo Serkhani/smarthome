@@ -41,7 +41,10 @@ class HomeController extends GetxController with GetTickerProviderStateMixin {
 
     scaleController!.addStatusListener((status) {
       if (status == AnimationStatus.dismissed) {
-        Get.offNamed(Routes.HOMEUI);
+        Timer(
+          const Duration(seconds: 1),
+          (() => Get.offNamed(Routes.HOMEUI)),
+        );
       }
     });
 
