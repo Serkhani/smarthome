@@ -8,15 +8,15 @@ class MasterBathPainter extends CustomPainter {
       ..style = PaintingStyle.stroke
       ..strokeWidth = 3.0;
       
-    Path path0 = Path();
-    path0.moveTo(size.width * 0.552, size.height * 0.88);
-    path0.lineTo(size.width * 0.505, size.height * 0.88);
-    path0.lineTo(size.width * 0.505, size.height * 1.04);
-    path0.lineTo(size.width * 0.635, size.height * 1.04);
-    path0.lineTo(size.width * 0.635, size.height * 0.88);
-    path0.lineTo(size.width * 0.602, size.height * 0.88);
+    Path masterBathPath = Path();
+    masterBathPath.moveTo(size.width * 0.552, size.height * 0.88);
+    masterBathPath.lineTo(size.width * 0.505, size.height * 0.88);
+    masterBathPath.lineTo(size.width * 0.505, size.height * 1.04);
+    masterBathPath.lineTo(size.width * 0.635, size.height * 1.04);
+    masterBathPath.lineTo(size.width * 0.635, size.height * 0.88);
+    masterBathPath.lineTo(size.width * 0.602, size.height * 0.88);
 
-    canvas.drawPath(path0, paint0);
+    canvas.drawPath(masterBathPath, paint0);
   }
 
   @override
