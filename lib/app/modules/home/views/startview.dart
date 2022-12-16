@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:smarthome/app/routes/app_pages.dart';
 
 import '../../../data/painter/bottomrightroombmaster.dart';
 import '../../../data/painter/livingroompainter.dart';
 import '../../../data/painter/masterbathpainter.dart';
 import '../../../data/painter/masterroompainter.dart';
 import '../../../data/painter/middlerightrbrbmaster.dart';
+import '../../../data/painter/porchpainter.dart';
 import '../../../data/painter/rightporchpainter.dart';
 import '../../../data/painter/topleftroompainter.dart';
 import '../../../data/painter/toprightroompainter.dart';
-import '../../../data/porchpainter.dart';
 
 class HouseView extends GetView {
   const HouseView({Key? key}) : super(key: key);
@@ -20,48 +21,47 @@ class HouseView extends GetView {
         alignment: Alignment.centerLeft,
         constraints: const BoxConstraints.expand(),
         child: Stack(
-          children: [
-            CustomPaint(
-              size: const Size(240.0, 360.0),
-              painter: PorchPainter(),
-            ),
-            CustomPaint(
-              size: const Size(240.0, 360.0),
-              painter: RightPorchPainter(),
-            ),
-            CustomPaint(
-              size: const Size(240.0, 360.0),
-              painter: MiddleRightRoomByRoomByMasterPainter(),
-            ),
-            CustomPaint(
-              size: const Size(240.0, 360.0),
-              painter: BottomRightRoomByMasterPainter(),
-            ),
-            CustomPaint(
-              size: const Size(240.0, 360.0),
-              painter: TopRightRoomPainter(),
-            ),
-            CustomPaint(
-              size: const Size(240.0, 360.0),
-              painter: TopLeftRoomPainter(),
-            ),
-            CustomPaint(
-              size: const Size(240.0, 360.0),
-              painter: LivingRoomPainter(),
-            ),
-            CustomPaint(
-              size: const Size(240.0, 360.0),
-              painter: MasterBathPainter(),
-            ),
-            CustomPaint(
-              size: const Size(240.0, 360.0),
-              painter: MasterRoomPainter(),
-            ),
-          ],
-        ),
+            children: [
+              
+              CustomPaint(
+                size: const Size(240.0, 360.0),
+                painter: PorchPainter(),
+              ),
+              CustomPaint(
+                size: const Size(240.0, 360.0),
+                painter: RightPorchPainter(),
+              ),
+              CustomPaint(
+                size: const Size(240.0, 360.0),
+                painter: MiddleRightRoomByRoomByMasterPainter(),
+              ),
+              CustomPaint(
+                size: const Size(240.0, 360.0),
+                painter: BottomRightRoomByMasterPainter(),
+              ),
+              CustomPaint(
+                size: const Size(240.0, 360.0),
+                painter: TopRightRoomPainter(),
+              ),
+              CustomPaint(
+                size: const Size(240.0, 360.0),
+                painter: TopLeftRoomPainter(),
+              ),
+              CustomPaint(
+                size: const Size(240.0, 360.0),
+                painter: LivingRoomPainter(),
+              ),
+              CustomPaint(
+                size: const Size(240.0, 360.0),
+                painter: MasterBathPainter(),
+              ),
+              CustomPaint(
+                size: const Size(240.0, 360.0),
+                painter: MasterRoomPainter(),
+              ),
+            ],
+          ),
       ),
     );
   }
 }
-
-

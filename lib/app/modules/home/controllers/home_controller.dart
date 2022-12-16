@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:smarthome/app/routes/app_pages.dart';
 
 class HomeController extends GetxController {
   //TODO: Implement HomeController
@@ -11,6 +12,7 @@ class HomeController extends GetxController {
 
   @override
   void onReady() {
+    
     super.onReady();
   }
 
