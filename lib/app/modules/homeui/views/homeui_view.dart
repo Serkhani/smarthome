@@ -1,17 +1,25 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:smarthome/app/data/clipper/doorclipper.dart';
+import 'package:smarthome/app/data/clipper/brroombmasterdoor_clipper.dart';
 import 'package:smarthome/app/data/clipper/leftporch_clipper.dart';
+import 'package:smarthome/app/data/clipper/leftporchdoor_clipper.dart';
 import 'package:smarthome/app/data/clipper/livingroom_clipper.dart';
 import 'package:smarthome/app/data/clipper/masterbath_clipper.dart';
+import 'package:smarthome/app/data/clipper/masterbathdoor_clipper.dart';
 import 'package:smarthome/app/data/clipper/masterroom_clipper.dart';
+import 'package:smarthome/app/data/clipper/masterroomdoor_clipper.dart';
+import 'package:smarthome/app/data/clipper/rbrbmasterdoor_clipper.dart';
 import 'package:smarthome/app/data/clipper/rightporch_clipper.dart';
+import 'package:smarthome/app/data/clipper/rightporchdoor_clipper.dart';
+import 'package:smarthome/app/data/clipper/topleftdoor_clipper.dart';
 import 'package:smarthome/app/data/clipper/topleftroom_clipper.dart';
+import 'package:smarthome/app/data/clipper/toprightdoor_clipper.dart';
 import 'package:smarthome/app/data/clipper/toprightroom_clipper.dart';
 
 import '../../../data/clipper/botttomrightroombmaster_clipper.dart';
 import '../../../data/clipper/roombyroombymaster_clipper.dart';
+import '../../../data/painter/startuppainter.dart';
 import '../controllers/homeui_controller.dart';
 
 class HomeuiView extends GetView<HomeuiController> {
@@ -19,9 +27,6 @@ class HomeuiView extends GetView<HomeuiController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        Get.back();
-      }),
       body: InteractiveViewer(
         maxScale: 5.0,
         child: Container(
@@ -29,6 +34,14 @@ class HomeuiView extends GetView<HomeuiController> {
           constraints: const BoxConstraints.expand(),
           child: Stack(
             children: [
+              CustomPaint(
+                size: const Size(240.0, 360.0),
+                painter: StartUpPainter(
+                  outerprogress: 1.0,
+                  roomsprogress: 1.0,
+                  color: Colors.black
+                    ),
+              ),
               ClipPath(
                 clipper: BottomRightRBMasterClipper(),
                 child: GestureDetector(
@@ -36,16 +49,6 @@ class HomeuiView extends GetView<HomeuiController> {
                   child: Container(
                     constraints: const BoxConstraints.expand(height: 360.0),
                     color: Colors.amber,
-                  ),
-                ),
-              ),
-              ClipPath(
-                clipper: DoorClipper(),
-                child: GestureDetector(
-                  onTap: ()=> print('door clipper'),
-                  child: Container(
-                    constraints: const BoxConstraints.expand(height: 360.0),
-                    color: Colors.red,
                   ),
                 ),
               ),
@@ -90,16 +93,6 @@ class HomeuiView extends GetView<HomeuiController> {
                 ),
               ),
               ClipPath(
-                clipper: RightPorchClipper(),
-                child: GestureDetector(
-                  onTap: ()=> print('rightporch'),
-                  child: Container(
-                    constraints: const BoxConstraints.expand(height: 360.0),
-                    color: Colors.deepPurple,
-                  ),
-                ),
-              ),
-              ClipPath(
                 clipper: RBRBMasterClipper(),
                 child: GestureDetector(
                   onTap: ()=> print('rbrbmaster'),
@@ -126,6 +119,96 @@ class HomeuiView extends GetView<HomeuiController> {
                   child: Container(
                     constraints: const BoxConstraints.expand(height: 360.0),
                     color: Colors.yellow,
+                  ),
+                ),
+              ),
+              ClipPath(
+                clipper: TopLeftDoorClipper(),
+                child: GestureDetector(
+                  onTap: ()=> print('topleft door'),
+                  child: Container(
+                    constraints: const BoxConstraints.expand(height: 360.0),
+                    color: Colors.teal,
+                  ),
+                ),
+              ),
+              ClipPath(
+                clipper: TopRightDoorClipper(),
+                child: GestureDetector(
+                  onTap: ()=> print('topright door'),
+                  child: Container(
+                    constraints: const BoxConstraints.expand(height: 360.0),
+                    color: Colors.teal,
+                  ),
+                ),
+              ),
+              ClipPath(
+                clipper: LeftPorchDoorClipper(),
+                child: GestureDetector(
+                  onTap: ()=> print('left porch door'),
+                  child: Container(
+                    constraints: const BoxConstraints.expand(height: 360.0),
+                    color: Colors.teal,
+                  ),
+                ),
+              ),
+              ClipPath(
+                clipper: RightPorchClipper(),
+                child: GestureDetector(
+                  onTap: ()=> print('right porch'),
+                  child: Container(
+                    constraints: const BoxConstraints.expand(height: 360.0),
+                    color: Colors.red,
+                  ),
+                ),
+              ),
+              ClipPath(
+                clipper: MasterRoomDoorClipper(),
+                child: GestureDetector(
+                  onTap: ()=> print('master door'),
+                  child: Container(
+                    constraints: const BoxConstraints.expand(height: 360.0),
+                    color: Colors.teal,
+                  ),
+                ),
+              ),
+              ClipPath(
+                clipper: MasterBathDoorClipper(),
+                child: GestureDetector(
+                  onTap: ()=> print('master bath door'),
+                  child: Container(
+                    constraints: const BoxConstraints.expand(height: 360.0),
+                    color: Colors.teal,
+                  ),
+                ),
+              ),
+              ClipPath(
+                clipper: RBRBMasterDoorClipper(),
+                child: GestureDetector(
+                  onTap: ()=> print('rbrbmaster door'),
+                  child: Container(
+                    constraints: const BoxConstraints.expand(height: 360.0),
+                    color: Colors.teal,
+                  ),
+                ),
+              ),
+              ClipPath(
+                clipper: BRRoomBMasterDoorClipper(),
+                child: GestureDetector(
+                  onTap: ()=> print('bottom right room by master'),
+                  child: Container(
+                    constraints: const BoxConstraints.expand(height: 360.0),
+                    color: Colors.teal,
+                  ),
+                ),
+              ),
+              ClipPath(
+                clipper: RightPorchDoorClipper(),
+                child: GestureDetector(
+                  onTap: ()=> print('right porch door'),
+                  child: Container(
+                    constraints: const BoxConstraints.expand(height: 360.0),
+                    color: Colors.teal,
                   ),
                 ),
               ),

@@ -5,20 +5,20 @@ import 'package:flutter/material.dart';
 class StartUpPainter extends CustomPainter {
   final double? outerprogress;
   final double? roomsprogress;
-
-  StartUpPainter({required this.outerprogress, required this.roomsprogress});
+  final Color color;
+  StartUpPainter({required this.outerprogress, required this.roomsprogress, this.color = const Color.fromARGB(255, 33, 150, 243)});
 
   @override
   void paint(Canvas canvas, Size size) {
     Paint paint = Paint()
-      ..color = const Color.fromARGB(255, 33, 150, 243)
+      ..color = color
       ..style = PaintingStyle.stroke
       ..strokeWidth = 3.0;
 
     Path outerPath = Path();
     outerPath.moveTo(size.width * 0.125, size.height * 0.06);
-    outerPath.lineTo(size.width * 0.125, size.height * 1.06);
-    outerPath.lineTo(size.width * 0.905, size.height * 1.06);
+    outerPath.lineTo(size.width * 0.125, size.height * 1.02);
+    outerPath.lineTo(size.width * 0.905, size.height * 1.02);
     outerPath.lineTo(size.width * 0.905, size.height * 0.99);
     outerPath.lineTo(size.width * 1.125, size.height * 0.99);
     outerPath.lineTo(size.width * 1.125, size.height * 0.81);
@@ -73,8 +73,8 @@ class StartUpPainter extends CustomPainter {
     Path bottomRightRoomBRBMPath = Path();
     bottomRightRoomBRBMPath.moveTo(size.width * 0.812, size.height * 0.790);
     bottomRightRoomBRBMPath.lineTo(size.width * 0.885, size.height * 0.790);
-    bottomRightRoomBRBMPath.lineTo(size.width * 0.885, size.height * 1.04);
-    bottomRightRoomBRBMPath.lineTo(size.width * 0.655, size.height * 1.04);
+    bottomRightRoomBRBMPath.lineTo(size.width * 0.885, size.height * 1.0);
+    bottomRightRoomBRBMPath.lineTo(size.width * 0.655, size.height * 1.0);
     bottomRightRoomBRBMPath.lineTo(size.width * 0.655, size.height * 0.790);
     bottomRightRoomBRBMPath.lineTo(size.width * 0.725, size.height * 0.790);
 
@@ -157,8 +157,8 @@ class StartUpPainter extends CustomPainter {
     Path masterBathPath = Path();
     masterBathPath.moveTo(size.width * 0.552, size.height * 0.88);
     masterBathPath.lineTo(size.width * 0.505, size.height * 0.88);
-    masterBathPath.lineTo(size.width * 0.505, size.height * 1.04);
-    masterBathPath.lineTo(size.width * 0.635, size.height * 1.04);
+    masterBathPath.lineTo(size.width * 0.505, size.height * 1.0);
+    masterBathPath.lineTo(size.width * 0.635, size.height * 1.0);
     masterBathPath.lineTo(size.width * 0.635, size.height * 0.88);
     masterBathPath.lineTo(size.width * 0.602, size.height * 0.88);
 
@@ -168,8 +168,8 @@ class StartUpPainter extends CustomPainter {
     Path masterRoomPath = Path();
     masterRoomPath.moveTo(size.width * 0.332, size.height * 0.70);
     masterRoomPath.lineTo(size.width * 0.145, size.height * 0.70);
-    masterRoomPath.lineTo(size.width * 0.145, size.height * 1.04);
-    masterRoomPath.lineTo(size.width * 0.485, size.height * 1.04);
+    masterRoomPath.lineTo(size.width * 0.145, size.height * 1.00);
+    masterRoomPath.lineTo(size.width * 0.485, size.height * 1.00);
     masterRoomPath.lineTo(size.width * 0.485, size.height * 0.860);
     masterRoomPath.lineTo(size.width * 0.552, size.height * 0.860);
 
