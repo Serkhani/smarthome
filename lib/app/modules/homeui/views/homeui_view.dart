@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:smarthome/app/data/clipper/brroombmasterdoor_clipper.dart';
-import 'package:smarthome/app/data/clipper/leftporch_clipper.dart';
-import 'package:smarthome/app/data/clipper/leftporchdoor_clipper.dart';
-import 'package:smarthome/app/data/clipper/livingroom_clipper.dart';
-import 'package:smarthome/app/data/clipper/masterbath_clipper.dart';
-import 'package:smarthome/app/data/clipper/masterbathdoor_clipper.dart';
-import 'package:smarthome/app/data/clipper/masterroom_clipper.dart';
-import 'package:smarthome/app/data/clipper/masterroomdoor_clipper.dart';
-import 'package:smarthome/app/data/clipper/rbrbmasterdoor_clipper.dart';
-import 'package:smarthome/app/data/clipper/rightporch_clipper.dart';
-import 'package:smarthome/app/data/clipper/rightporchdoor_clipper.dart';
-import 'package:smarthome/app/data/clipper/topleftdoor_clipper.dart';
-import 'package:smarthome/app/data/clipper/topleftroom_clipper.dart';
-import 'package:smarthome/app/data/clipper/toprightdoor_clipper.dart';
-import 'package:smarthome/app/data/clipper/toprightroom_clipper.dart';
-
+import '../../../data/clipper/brroombmasterdoor_clipper.dart';
+import '../../../data/clipper/leftporch_clipper.dart';
+import '../../../data/clipper/leftporchdoor_clipper.dart';
+import '../../../data/clipper/livingroom_clipper.dart';
+import '../../../data/clipper/masterbath_clipper.dart';
+import '../../../data/clipper/masterbathdoor_clipper.dart';
+import '../../../data/clipper/masterroom_clipper.dart';
+import '../../../data/clipper/masterroomdoor_clipper.dart';
+import '../../../data/clipper/rbrbmasterdoor_clipper.dart';
+import '../../../data/clipper/rightporch_clipper.dart';
+import '../../../data/clipper/rightporchdoor_clipper.dart';
+import '../../../data/clipper/topleftdoor_clipper.dart';
+import '../../../data/clipper/topleftroom_clipper.dart';
+import '../../../data/clipper/toprightdoor_clipper.dart';
+import '../../../data/clipper/toprightroom_clipper.dart';
 import '../../../data/clipper/botttomrightroombmaster_clipper.dart';
 import '../../../data/clipper/roombyroombymaster_clipper.dart';
 import '../../../data/painter/startuppainter.dart';
