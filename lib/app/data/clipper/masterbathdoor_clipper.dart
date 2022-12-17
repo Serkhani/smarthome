@@ -12,6 +12,8 @@ class MasterBathDoorClipper extends CustomClipper<Path> {
         modifiedSize.width * 0.602, modifiedSize.height * 0.88);
     masterBathDoorPath.lineTo(
         modifiedSize.width * 0.602, modifiedSize.height * 0.86);
+    masterBathDoorPath.lineTo(
+        modifiedSize.width * 0.552, modifiedSize.height * 0.86);
     masterBathDoorPath.close();
     return masterBathDoorPath;
   }

@@ -10,9 +10,9 @@ class RBRBMasterDoorClipper extends CustomClipper<Path> {
     rbrbmasterdoorPath.lineTo(
         modifiedSize.width * 1.064, modifiedSize.height * 0.730);
     rbrbmasterdoorPath.lineTo(
-        modifiedSize.width * 1.064, modifiedSize.height * 0.720);
+        modifiedSize.width * 1.064, modifiedSize.height * 0.710);
     rbrbmasterdoorPath.lineTo(
-        modifiedSize.width * 0.991, modifiedSize.height * 0.720);
+        modifiedSize.width * 0.991, modifiedSize.height * 0.710);
     rbrbmasterdoorPath.close();
 
     return rbrbmasterdoorPath;

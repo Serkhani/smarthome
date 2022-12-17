@@ -12,7 +12,7 @@ class LeftPorchDoorClipper extends CustomClipper<Path> {
         modifiedSize.width * 0.265, modifiedSize.height * 0.466);
     leftporchdoor.lineTo(
         modifiedSize.width * 0.285, modifiedSize.height * 0.466);
-    leftporchdoor.moveTo(
+    leftporchdoor.lineTo(
         modifiedSize.width * 0.285, modifiedSize.height * 0.396);
     leftporchdoor.close();
     return leftporchdoor;

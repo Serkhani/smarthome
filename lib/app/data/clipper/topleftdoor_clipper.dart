@@ -11,7 +11,7 @@ class TopLeftDoorClipper extends CustomClipper<Path> {
         modifiedSize.width * 0.555, modifiedSize.height * 0.31);
     topLeftDoorPath.lineTo(
         modifiedSize.width * 0.555, modifiedSize.height * 0.33);
-    topLeftDoorPath.moveTo(
+    topLeftDoorPath.lineTo(
         modifiedSize.width * 0.485, modifiedSize.height * 0.33);
     topLeftDoorPath.close();
     return topLeftDoorPath;

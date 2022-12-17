@@ -9,9 +9,12 @@ class MasterRoomDoorClipper extends CustomClipper<Path> {
     masterRoomDoorPath.moveTo(
         modifiedSize.width * 0.332, modifiedSize.height * 0.70);
     masterRoomDoorPath.lineTo(
-        modifiedSize.width * 0.635, modifiedSize.height * 0.70);
+        modifiedSize.width * 0.402, modifiedSize.height * 0.70);
     masterRoomDoorPath.lineTo(
-        modifiedSize.width * 0.635, modifiedSize.height * 0.68);
+        modifiedSize.width * 0.402, modifiedSize.height * 0.68);
+    masterRoomDoorPath.lineTo(
+        modifiedSize.width * 0.332, modifiedSize.height * 0.68);
+    
     masterRoomDoorPath.close();
     return masterRoomDoorPath;
   }

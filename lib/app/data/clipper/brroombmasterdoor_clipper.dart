@@ -8,12 +8,12 @@ class BRRoomBMasterDoorClipper extends CustomClipper<Path> {
     Path bottomRightRoomBMDoorPath = Path();
     bottomRightRoomBMDoorPath.moveTo(
         modifiedSize.width * 0.812, modifiedSize.height * 0.790);
-    bottomRightRoomBMDoorPath.moveTo(
+    bottomRightRoomBMDoorPath.lineTo(
         modifiedSize.width * 0.725, modifiedSize.height * 0.790);
-    bottomRightRoomBMDoorPath.moveTo(
-        modifiedSize.width * 0.725, modifiedSize.height * 0.770);
-    bottomRightRoomBMDoorPath.moveTo(
-        modifiedSize.width * 0.812, modifiedSize.height * 0.770);
+    bottomRightRoomBMDoorPath.lineTo(
+        modifiedSize.width * 0.725, modifiedSize.height * 0.765);
+    bottomRightRoomBMDoorPath.lineTo(
+        modifiedSize.width * 0.812, modifiedSize.height * 0.765);
     bottomRightRoomBMDoorPath.close();
     return bottomRightRoomBMDoorPath;
   }
