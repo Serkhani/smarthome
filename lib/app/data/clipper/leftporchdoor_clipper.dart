@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class PorchDoorClipper extends CustomClipper<Path> {
+class LeftPorchDoorClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     Size modifiedSize = const Size(240.0, 360.0);
