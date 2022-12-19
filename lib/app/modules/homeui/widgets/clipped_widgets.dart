@@ -16,9 +16,9 @@ class Clip extends StatelessWidget {
       clipper: clipper,
       child: GestureDetector(
         onTap: onPressed,
-        child: Container(
+        child: AnimatedContainer(
           constraints: const BoxConstraints.expand(height: 360.0),
-          color: color,
+          color: color, duration: const Duration(milliseconds: 500),
         ),
       ),
     );

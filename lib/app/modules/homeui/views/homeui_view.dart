@@ -44,14 +44,20 @@ class HomeuiView extends GetView<HomeuiController> {
                       color: Colors.black),
                 ),
                 Clip(
-                    clipper: BottomRightRBMasterClipper(),
-                    onPressed: () => controller.brrbm(),
-                    color: controller.smartHome
+                  clipper: BottomRightRBMasterClipper(),
+                  onPressed: () => controller.brrbm(),
+                  color: controller.smartHome
                           .findRoom(Rooms.rbmaster)!
-                          .lightIsOn
+                          .isEmergency
                           .value
-                      ? Colors.orange.withOpacity(0.6)
-                      : Colors.grey,),
+                      ? Colors.red
+                      : controller.smartHome
+                              .findRoom(Rooms.rbmaster)!
+                              .lightIsOn
+                              .value
+                          ? Colors.orange.withOpacity(0.6)
+                          : Colors.grey,
+                ),
                 Clip(
                   clipper: BRRoomBMasterDoorClipper(),
                   onPressed: () => controller.brrbmdoor(),
@@ -63,14 +69,20 @@ class HomeuiView extends GetView<HomeuiController> {
                       : Colors.black,
                 ),
                 Clip(
-                    clipper: LeftPorchClipper(),
-                    onPressed: () => controller.leftPorch(),
-                    color: controller.smartHome
+                  clipper: LeftPorchClipper(),
+                  onPressed: () => controller.leftPorch(),
+                  color: controller.smartHome
                           .findRoom(Rooms.leftPorch)!
-                          .lightIsOn
+                          .isEmergency
                           .value
-                      ? Colors.orange.withOpacity(0.6)
-                      : Colors.grey,),
+                      ? Colors.red
+                      : controller.smartHome
+                              .findRoom(Rooms.leftPorch)!
+                              .lightIsOn
+                              .value
+                          ? Colors.orange.withOpacity(0.6)
+                          : Colors.grey,
+                ),
                 Clip(
                   clipper: LeftPorchDoorClipper(),
                   onPressed: () => controller.leftPorchdoor(),
@@ -82,23 +94,35 @@ class HomeuiView extends GetView<HomeuiController> {
                       : Colors.black,
                 ),
                 Clip(
-                    clipper: LivingRoomClipper(),
-                    onPressed: () => controller.livingRoom(),
-                    color: controller.smartHome
+                  clipper: LivingRoomClipper(),
+                  onPressed: () => controller.livingRoom(),
+                  color: controller.smartHome
                           .findRoom(Rooms.livingRoom)!
-                          .lightIsOn
+                          .isEmergency
                           .value
-                      ? Colors.orange.withOpacity(0.6)
-                      : Colors.grey,),
+                      ? Colors.red
+                      : controller.smartHome
+                              .findRoom(Rooms.livingRoom)!
+                              .lightIsOn
+                              .value
+                          ? Colors.orange.withOpacity(0.6)
+                          : Colors.grey,
+                ),
                 Clip(
-                    clipper: MasterBathClipper(),
-                    onPressed: () => controller.masterBath(),
-                    color: controller.smartHome
+                  clipper: MasterBathClipper(),
+                  onPressed: () => controller.masterBath(),
+                  color: controller.smartHome
                           .findRoom(Rooms.masterBath)!
-                          .lightIsOn
+                          .isEmergency
                           .value
-                      ? Colors.orange.withOpacity(0.6)
-                      : Colors.grey,),
+                      ? Colors.red
+                      : controller.smartHome
+                              .findRoom(Rooms.masterBath)!
+                              .lightIsOn
+                              .value
+                          ? Colors.orange.withOpacity(0.6)
+                          : Colors.grey,
+                ),
                 Clip(
                   clipper: MasterBathDoorClipper(),
                   onPressed: () => controller.masterBathDoor(),
@@ -110,14 +134,20 @@ class HomeuiView extends GetView<HomeuiController> {
                       : Colors.black,
                 ),
                 Clip(
-                    clipper: MasterRoomClipper(),
-                    onPressed: () => controller.masterRoom(),
-                    color: controller.smartHome
+                  clipper: MasterRoomClipper(),
+                  onPressed: () => controller.masterRoom(),
+                  color: controller.smartHome
                           .findRoom(Rooms.master)!
-                          .lightIsOn
+                          .isEmergency
                           .value
-                      ? Colors.orange.withOpacity(0.6)
-                      : Colors.grey,),
+                      ? Colors.red
+                      : controller.smartHome
+                              .findRoom(Rooms.master)!
+                              .lightIsOn
+                              .value
+                          ? Colors.orange.withOpacity(0.6)
+                          : Colors.grey,
+                ),
                 Clip(
                   clipper: MasterRoomDoorClipper(),
                   onPressed: () => controller.masterRoomDoor(),
@@ -129,14 +159,20 @@ class HomeuiView extends GetView<HomeuiController> {
                       : Colors.black,
                 ),
                 Clip(
-                    clipper: RBRBMasterClipper(),
-                    onPressed: () => controller.rbrbm(),
-                    color: controller.smartHome
+                  clipper: RBRBMasterClipper(),
+                  onPressed: () => controller.rbrbm(),
+                  color: controller.smartHome
                           .findRoom(Rooms.rbrbmaster)!
-                          .lightIsOn
+                          .isEmergency
                           .value
-                      ? Colors.orange.withOpacity(0.6)
-                      : Colors.grey,),
+                      ? Colors.red
+                      : controller.smartHome
+                              .findRoom(Rooms.rbrbmaster)!
+                              .lightIsOn
+                              .value
+                          ? Colors.orange.withOpacity(0.6)
+                          : Colors.grey,
+                ),
                 Clip(
                   clipper: RBRBMasterDoorClipper(),
                   onPressed: () => controller.rbrbmDoor(),
@@ -148,14 +184,20 @@ class HomeuiView extends GetView<HomeuiController> {
                       : Colors.black,
                 ),
                 Clip(
-                    clipper: RightPorchClipper(),
-                    onPressed: () => controller.rightPorch(),
-                    color: controller.smartHome
+                  clipper: RightPorchClipper(),
+                  onPressed: () => controller.rightPorch(),
+                  color: controller.smartHome
                           .findRoom(Rooms.rightPorch)!
-                          .lightIsOn
+                          .isEmergency
                           .value
-                      ? Colors.orange.withOpacity(0.6)
-                      : Colors.grey,),
+                      ? Colors.red
+                      : controller.smartHome
+                              .findRoom(Rooms.rightPorch)!
+                              .lightIsOn
+                              .value
+                          ? Colors.orange.withOpacity(0.6)
+                          : Colors.grey,
+                ),
                 Clip(
                   clipper: RightPorchDoorClipper(),
                   onPressed: () => controller.rightPorchDoor(),
@@ -177,23 +219,35 @@ class HomeuiView extends GetView<HomeuiController> {
                       : Colors.black,
                 ),
                 Clip(
-                    clipper: TopLeftRoomClipper(),
-                    onPressed: () => controller.topLeft(),
-                    color: controller.smartHome
+                  clipper: TopLeftRoomClipper(),
+                  onPressed: () => controller.topLeft(),
+                  color: controller.smartHome
                           .findRoom(Rooms.topLeft)!
-                          .lightIsOn
+                          .isEmergency
                           .value
-                      ? Colors.orange.withOpacity(0.6)
-                      : Colors.grey,),
+                      ? Colors.red
+                      : controller.smartHome
+                              .findRoom(Rooms.topLeft)!
+                              .lightIsOn
+                              .value
+                          ? Colors.orange.withOpacity(0.6)
+                          : Colors.grey,
+                ),
                 Clip(
-                    clipper: TopRightRoomClipper(),
-                    onPressed: () => controller.topRight(),
-                    color: controller.smartHome
+                  clipper: TopRightRoomClipper(),
+                  onPressed: () => controller.topRight(),
+                  color: controller.smartHome
                           .findRoom(Rooms.topRight)!
-                          .lightIsOn
+                          .isEmergency
                           .value
-                      ? Colors.orange.withOpacity(0.6)
-                      : Colors.grey,),
+                      ? Colors.red
+                      : controller.smartHome
+                              .findRoom(Rooms.topRight)!
+                              .lightIsOn
+                              .value
+                          ? Colors.orange.withOpacity(0.6)
+                          : Colors.grey,
+                ),
                 Clip(
                   clipper: TopRightDoorClipper(),
                   onPressed: () => controller.topRightDoor(),

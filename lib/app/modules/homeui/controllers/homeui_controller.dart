@@ -7,8 +7,9 @@ import 'package:smarthome/app/data/utils/smarthome.dart';
 import 'package:smarthome/app/modules/homeui/widgets/room_dialog.dart';
 
 class HomeuiController extends GetxController {
-  final SmartHome smartHome = SmartHome(rooms: [
-    Room(
+  final SmartHome smartHome = SmartHome(
+    rooms: [
+      Room(
         doorIsOpen: false.obs,
         lightIsOn: false.obs,
         type: Rooms.leftPorch,
@@ -18,8 +19,8 @@ class HomeuiController extends GetxController {
           Sensor(type: SensorType.temperatureSensor, value: 73.6.obs),
           Sensor(type: SensorType.motionSensor, value: 1.0.obs),
         ],
-        index: 0),
-    Room(
+      ),
+      Room(
         doorIsOpen: true.obs,
         lightIsOn: true.obs,
         type: Rooms.topLeft,
@@ -29,8 +30,8 @@ class HomeuiController extends GetxController {
           Sensor(type: SensorType.temperatureSensor, value: 37.6.obs),
           Sensor(type: SensorType.motionSensor, value: 1.0.obs),
         ],
-        index: 1),
-    Room(
+      ),
+      Room(
         doorIsOpen: false.obs,
         lightIsOn: true.obs,
         type: Rooms.topRight,
@@ -38,10 +39,10 @@ class HomeuiController extends GetxController {
         sensors: [
           Sensor(type: SensorType.gasSensor, value: 240.0.obs),
           Sensor(type: SensorType.temperatureSensor, value: 47.6.obs),
-          Sensor(type: SensorType.motionSensor, value: 1.0.obs),
+          Sensor(type: SensorType.motionSensor, value: .0.obs),
         ],
-        index: 2),
-    Room(
+      ),
+      Room(
         doorIsOpen: true.obs,
         lightIsOn: false.obs,
         type: Rooms.livingRoom,
@@ -49,10 +50,10 @@ class HomeuiController extends GetxController {
         sensors: [
           Sensor(type: SensorType.gasSensor, value: 500.0.obs),
           Sensor(type: SensorType.temperatureSensor, value: 37.6.obs),
-          Sensor(type: SensorType.motionSensor, value: 1.0.obs),
+          Sensor(type: SensorType.motionSensor, value: .0.obs),
         ],
-        index: 3),
-    Room(
+      ),
+      Room(
         doorIsOpen: false.obs,
         lightIsOn: false.obs,
         type: Rooms.rightPorch,
@@ -62,8 +63,8 @@ class HomeuiController extends GetxController {
           Sensor(type: SensorType.temperatureSensor, value: 32.6.obs),
           Sensor(type: SensorType.motionSensor, value: 1.0.obs),
         ],
-        index: 4),
-    Room(
+      ),
+      Room(
         doorIsOpen: false.obs,
         lightIsOn: false.obs,
         type: Rooms.master,
@@ -73,8 +74,8 @@ class HomeuiController extends GetxController {
           Sensor(type: SensorType.temperatureSensor, value: 37.6.obs),
           Sensor(type: SensorType.motionSensor, value: 1.0.obs),
         ],
-        index: 5),
-    Room(
+      ),
+      Room(
         doorIsOpen: false.obs,
         lightIsOn: true.obs,
         type: Rooms.masterBath,
@@ -84,8 +85,8 @@ class HomeuiController extends GetxController {
           Sensor(type: SensorType.temperatureSensor, value: 37.6.obs),
           Sensor(type: SensorType.motionSensor, value: 1.0.obs),
         ],
-        index: 6),
-    Room(
+      ),
+      Room(
         doorIsOpen: false.obs,
         lightIsOn: false.obs,
         type: Rooms.rbmaster,
@@ -95,8 +96,8 @@ class HomeuiController extends GetxController {
           Sensor(type: SensorType.temperatureSensor, value: 17.6.obs),
           Sensor(type: SensorType.motionSensor, value: 1.0.obs),
         ],
-        index: 7),
-    Room(
+      ),
+      Room(
         doorIsOpen: false.obs,
         lightIsOn: false.obs,
         type: Rooms.rbrbmaster,
@@ -106,8 +107,9 @@ class HomeuiController extends GetxController {
           Sensor(type: SensorType.temperatureSensor, value: 16.0.obs),
           Sensor(type: SensorType.motionSensor, value: 1.0.obs),
         ],
-        index: 8)
-  ]);
+      ),
+    ],
+  );
   @override
   void onInit() {
     super.onInit();

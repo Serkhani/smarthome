@@ -5,21 +5,20 @@ import '../../../app/data/utils/sensor_types.dart';
 
 class Room {
   final Rooms type;
-  final int index;
   // final RxDouble currentTemp;
   final RxBool lightIsOn;
   final RxBool doorIsOpen;
   final RxBool isEmergency;
   final List<Sensor> sensors;
 
-  const Room(
-      {required this.doorIsOpen,
-      // required this.currentTemp,
-      required this.lightIsOn,
-      required this.type,
-      required this.isEmergency,
-      required this.sensors,
-      required this.index});
+  const Room({
+    required this.doorIsOpen,
+    // required this.currentTemp,
+    required this.lightIsOn,
+    required this.type,
+    required this.isEmergency,
+    required this.sensors,
+  });
 
   Sensor? findSensor(SensorType type) {
     for (var sensor in sensors) {
