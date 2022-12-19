@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:smarthome/app/modules/homeui/widgets/room_dialog.dart';
 
 class HomeuiController extends GetxController {
   @override
@@ -22,6 +23,17 @@ class HomeuiController extends GetxController {
 
   void livingRoom() {
     print('livingroom');
+    Get.defaultDialog(
+      title: '',
+      content: RoomDialog(
+        temp: RxDouble(40.9),
+        ligthIsOn: RxBool(false),
+        doorIsOpen: RxBool(false),
+        onLightChanged: (value)=>print('toggle light: $value'),
+        onDoorChanged: (value)=>print('toggle door: $value'),
+        smoke: RxDouble(500.0),
+      ),
+    );
   }
 
   void brrbmdoor() {
