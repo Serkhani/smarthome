@@ -19,14 +19,14 @@ class RoomDialog extends StatelessWidget {
             title: const Text('Light: '),
             trailing: Switch(
               value: room!.lightIsOn.value,
-              onChanged: (value) => room!.toggleLight(value),
+              onChanged: (value) => room!.toggleLight(),
             ),
           ),
           ListTile(
             title: const Text('Door'),
             trailing: Switch(
                 value: room!.doorIsOpen.value,
-                onChanged: (value) => room!.toggleDoor(value)),
+                onChanged: (value) => room!.toggleDoor()),
           ),
           ListTile(
             title: const Text('Temp: '),

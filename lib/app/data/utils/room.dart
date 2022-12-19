@@ -42,11 +42,11 @@ class Room {
     isEmergency.value = false;
   }
 
-  void toggleLight(value) {
-    lightIsOn.value = value;
+  void toggleLight() {
+    lightIsOn.value = !lightIsOn.value;
   }
 
-  void toggleDoor(value) {
-    doorIsOpen.value = value;
+  void toggleDoor() {
+    doorIsOpen.value = !doorIsOpen.value;
   }
 }

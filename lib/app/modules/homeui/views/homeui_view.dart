@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:smarthome/app/data/utils/room_types.dart';
 
 import '../../../../app/modules/homeui/widgets/clipped_widgets.dart';
 import '../../../data/clipper/leftporch_clipper.dart';
@@ -29,42 +30,131 @@ class HomeuiView extends GetView<HomeuiController> {
     return Scaffold(
       body: InteractiveViewer(
         maxScale: 5.0,
-        child: Container(
-          alignment: Alignment.centerLeft,
-          constraints: const BoxConstraints.expand(),
-          child: Stack(
-            children: [
-              CustomPaint(
-                size: const Size(240.0, 360.0),
-                painter: StartUpPainter(
-                  outerprogress: 1.0,
-                  roomsprogress: 1.0,
-                  color: Colors.black
-                    ),
-              ),
-              Clip(clipper: BottomRightRBMasterClipper(), onPressed: ()=>controller.brrbm()),
-              Clip(clipper: BRRoomBMasterDoorClipper(), onPressed: ()=>controller.brrbmdoor(), color: Colors.black,),
-              Clip(clipper: LeftPorchClipper(), onPressed: ()=>controller.leftPorch()),
-              Clip(clipper: LeftPorchDoorClipper(), onPressed: ()=>controller.leftPorchdoor(), color: Colors.black,),
-              Clip(clipper: LivingRoomClipper(), onPressed: ()=>controller.livingRoom()),
-              Clip(clipper: MasterBathClipper(), onPressed: ()=>controller.masterBath()),
-              Clip(clipper: MasterBathDoorClipper(), onPressed: ()=>controller.masterBathDoor(), color: Colors.black,),
-              Clip(clipper: MasterRoomClipper(), onPressed: ()=>controller.masterRoom()),
-              Clip(clipper: MasterRoomDoorClipper(), onPressed: ()=>controller.masterRoomDoor(), color: Colors.black,),
-              Clip(clipper: RBRBMasterClipper(), onPressed: ()=>controller.rbrbm()),
-              Clip(clipper: RBRBMasterDoorClipper(), onPressed: ()=>controller.rbrbmDoor(), color: Colors.black,),
-              Clip(clipper: RightPorchClipper(), onPressed: ()=>controller.rightPorch()),
-              Clip(clipper: RightPorchDoorClipper(), onPressed: ()=>controller.rightPorchDoor(), color: Colors.black,),
-              Clip(clipper: TopLeftDoorClipper(), onPressed: ()=>controller.topLeftDoor(), color: Colors.black,),
-              Clip(clipper: TopLeftRoomClipper(), onPressed: ()=>controller.topLeft()),
-              Clip(clipper: TopRightRoomClipper(), onPressed: ()=>controller.topRight()),
-              Clip(clipper: TopRightDoorClipper(), onPressed: ()=>controller.topRightDoor(), color: Colors.black,),
+        child: Obx(
+          () => Container(
+            alignment: Alignment.centerLeft,
+            constraints: const BoxConstraints.expand(),
+            child: Stack(
+              children: [
+                CustomPaint(
+                  size: const Size(240.0, 360.0),
+                  painter: StartUpPainter(
+                      outerprogress: 1.0,
+                      roomsprogress: 1.0,
+                      color: Colors.black),
+                ),
+                Clip(
+                    clipper: BottomRightRBMasterClipper(),
+                    onPressed: () => controller.brrbm()),
+                Clip(
+                  clipper: BRRoomBMasterDoorClipper(),
+                  onPressed: () => controller.brrbmdoor(),
+                  color: controller.smartHome
+                          .findRoom(Rooms.rbmaster)!
+                          .doorIsOpen
+                          .value
+                      ? Colors.white
+                      : Colors.black,
+                ),
+                Clip(
+                    clipper: LeftPorchClipper(),
+                    onPressed: () => controller.leftPorch()),
+                Clip(
+                  clipper: LeftPorchDoorClipper(),
+                  onPressed: () => controller.leftPorchdoor(),
+                  color: controller.smartHome
+                          .findRoom(Rooms.leftPorch)!
+                          .doorIsOpen
+                          .value
+                      ? Colors.white
+                      : Colors.black,
+                ),
+                Clip(
+                    clipper: LivingRoomClipper(),
+                    onPressed: () => controller.livingRoom()),
+                Clip(
+                    clipper: MasterBathClipper(),
+                    onPressed: () => controller.masterBath()),
+                Clip(
+                  clipper: MasterBathDoorClipper(),
+                  onPressed: () => controller.masterBathDoor(),
+                  color: controller.smartHome
+                          .findRoom(Rooms.masterBath)!
+                          .doorIsOpen
+                          .value
+                      ? Colors.white
+                      : Colors.black,
+                ),
+                Clip(
+                    clipper: MasterRoomClipper(),
+                    onPressed: () => controller.masterRoom()),
+                Clip(
+                  clipper: MasterRoomDoorClipper(),
+                  onPressed: () => controller.masterRoomDoor(),
+                  color: controller.smartHome
+                          .findRoom(Rooms.master)!
+                          .doorIsOpen
+                          .value
+                      ? Colors.white
+                      : Colors.black,
+                ),
+                Clip(
+                    clipper: RBRBMasterClipper(),
+                    onPressed: () => controller.rbrbm()),
+                Clip(
+                  clipper: RBRBMasterDoorClipper(),
+                  onPressed: () => controller.rbrbmDoor(),
+                  color: controller.smartHome
+                          .findRoom(Rooms.rbrbmaster)!
+                          .doorIsOpen
+                          .value
+                      ? Colors.white
+                      : Colors.black,
+                ),
+                Clip(
+                    clipper: RightPorchClipper(),
+                    onPressed: () => controller.rightPorch()),
+                Clip(
+                  clipper: RightPorchDoorClipper(),
+                  onPressed: () => controller.rightPorchDoor(),
+                  color: controller.smartHome
+                          .findRoom(Rooms.rightPorch)!
+                          .doorIsOpen
+                          .value
+                      ? Colors.white
+                      : Colors.black,
+                ),
+                Clip(
+                  clipper: TopLeftDoorClipper(),
+                  onPressed: () => controller.topLeftDoor(),
+                  color: controller.smartHome
+                          .findRoom(Rooms.topLeft)!
+                          .doorIsOpen
+                          .value
+                      ? Colors.white
+                      : Colors.black,
+                ),
+                Clip(
+                    clipper: TopLeftRoomClipper(),
+                    onPressed: () => controller.topLeft()),
+                Clip(
+                    clipper: TopRightRoomClipper(),
+                    onPressed: () => controller.topRight()),
+                Clip(
+                  clipper: TopRightDoorClipper(),
+                  onPressed: () => controller.topRightDoor(),
+                  color: controller.smartHome
+                          .findRoom(Rooms.topRight)!
+                          .doorIsOpen
+                          .value
+                      ? Colors.white
+                      : Colors.black,
+                ),
               ],
+            ),
           ),
         ),
       ),
     );
   }
 }
-
-
