@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 class HomeuiController extends GetxController {
@@ -27,6 +26,18 @@ class HomeuiController extends GetxController {
 
   void brrbmdoor() {
     print('brrbmdoor');
+    Get.defaultDialog(
+      radius: 12,
+      textCancel: 'No',
+      textConfirm: 'Yes',
+      title: 'Toggle Door?',
+      middleText: 'Door will open if closed and vice versa',
+      onCancel: () => print('No'),
+      onConfirm: () {
+        print('yes');
+        Get.back();
+      },
+    );
   }
 
   void leftPorch() {
@@ -35,6 +46,18 @@ class HomeuiController extends GetxController {
 
   void leftPorchdoor() {
     print('leftPorchdoor');
+    Get.defaultDialog(
+      radius: 12,
+      textCancel: 'No',
+      textConfirm: 'Yes',
+      title: 'Toggle Door?',
+      middleText: 'Door will open if closed and vice versa',
+      onCancel: () => print('No'),
+      onConfirm: () {
+        print('yes');
+        Get.back();
+      },
+    );
   }
 
   void masterBath() {
@@ -43,6 +66,18 @@ class HomeuiController extends GetxController {
 
   void masterBathDoor() {
     print('masterBathDoor');
+    Get.defaultDialog(
+      radius: 12,
+      textCancel: 'No',
+      textConfirm: 'Yes',
+      title: 'Toggle Door?',
+      middleText: 'Door will open if closed and vice versa',
+      onCancel: () => print('No'),
+      onConfirm: () {
+        print('yes');
+        Get.back();
+      },
+    );
   }
 
   void masterRoom() {
@@ -51,6 +86,18 @@ class HomeuiController extends GetxController {
 
   void masterRoomDoor() {
     print('masterRoomDoor');
+    Get.defaultDialog(
+      radius: 12,
+      textCancel: 'No',
+      textConfirm: 'Yes',
+      title: 'Toggle Door?',
+      middleText: 'Door will open if closed and vice versa',
+      onCancel: () => print('No'),
+      onConfirm: () {
+        print('yes');
+        Get.back();
+      },
+    );
   }
 
   void rbrbm() {
@@ -59,6 +106,18 @@ class HomeuiController extends GetxController {
 
   void rbrbmDoor() {
     print('rbrbmDoor');
+    Get.defaultDialog(
+      radius: 12,
+      textCancel: 'No',
+      textConfirm: 'Yes',
+      title: 'Toggle Door?',
+      middleText: 'Door will open if closed and vice versa',
+      onCancel: () => print('No'),
+      onConfirm: () {
+        print('yes');
+        Get.back();
+      },
+    );
   }
 
   void rightPorch() {
@@ -67,10 +126,34 @@ class HomeuiController extends GetxController {
 
   void rightPorchDoor() {
     print('rightPorchDoor');
+    Get.defaultDialog(
+      radius: 12,
+      textCancel: 'No',
+      textConfirm: 'Yes',
+      title: 'Toggle Door?',
+      middleText: 'Door will open if closed and vice versa',
+      onCancel: () => print('No'),
+      onConfirm: () {
+        print('yes');
+        Get.back();
+      },
+    );
   }
 
   void topLeftDoor() {
     print('topLeftDoor');
+    Get.defaultDialog(
+      radius: 12,
+      textCancel: 'No',
+      textConfirm: 'Yes',
+      title: 'Toggle Door?',
+      middleText: 'Door will open if closed and vice versa',
+      onCancel: () => print('No'),
+      onConfirm: () {
+        print('yes');
+        Get.back();
+      },
+    );
   }
 
   void topLeft() {
@@ -83,5 +166,17 @@ class HomeuiController extends GetxController {
 
   void topRightDoor() {
     print('topRightDoor');
+    Get.defaultDialog(
+      radius: 12,
+      textCancel: 'No',
+      textConfirm: 'Yes',
+      title: 'Toggle Door?',
+      middleText: 'Door will open if closed and vice versa',
+      onCancel: () => print('No'),
+      onConfirm: () {
+        print('yes');
+        Get.back();
+      },
+    );
   }
 }
