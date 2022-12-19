@@ -1,9 +1,12 @@
 import 'package:get/get.dart';
-import 'package:smarthome/app/data/utils/sensor.dart';
+import '../../../app/data/utils/room_types.dart';
+import '../../../app/data/utils/sensor.dart';
+import '../../../app/data/utils/sensor_types.dart';
 
 class Room {
-  final String name;
+  final Rooms type;
   final int index;
+  // final RxDouble currentTemp;
   final RxBool lightIsOn;
   final RxBool doorIsOpen;
   final RxBool isEmergency;
@@ -11,11 +14,21 @@ class Room {
 
   const Room(
       {required this.doorIsOpen,
+      // required this.currentTemp,
       required this.lightIsOn,
-      required this.name,
+      required this.type,
       required this.isEmergency,
       required this.sensors,
       required this.index});
+
+  Sensor? findSensor(SensorType type) {
+    for (var sensor in sensors) {
+      if (sensor.type == type) {
+        return sensor;
+      }
+    }
+    return null;
+  }
 
   void addSensor(Sensor sensor) {
     sensors.add(sensor);
@@ -29,11 +42,11 @@ class Room {
     isEmergency.value = false;
   }
 
-  void toggleLight() {
-    lightIsOn.value = !lightIsOn.value;
+  void toggleLight(value) {
+    lightIsOn.value = value;
   }
 
-  void toggleDoor() {
-    doorIsOpen.value = !doorIsOpen.value;
+  void toggleDoor(value) {
+    doorIsOpen.value = value;
   }
 }
