@@ -320,7 +320,7 @@ class HomeuiController extends GetxController {
       title: 'Toggle Door?',
       middleText: 'Door will open if closed and vice versa',
       onConfirm: () {
-        var room = smartHome.findRoom(Rooms.rbmaster);
+        var room = smartHome.findRoom(Rooms.topRight);
         room!.toggleDoor();
         Get.back();
       },
