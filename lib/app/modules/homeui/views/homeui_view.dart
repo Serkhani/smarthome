@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:smarthome/app/modules/homeui/widgets/clipped_widgets.dart';
 
+import '../../../../app/modules/homeui/widgets/clipped_widgets.dart';
 import '../../../data/clipper/leftporch_clipper.dart';
 import '../../../data/clipper/leftporchdoor_clipper.dart';
 import '../../../data/clipper/livingroom_clipper.dart';
