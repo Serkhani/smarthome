@@ -1,16 +1,5 @@
-# smarthome
+# SmartHome
 
-A new Flutter project.
+https://github.com/Serkhani/smarthome/assets/66341820/293cbd6a-f5c0-4916-ab19-acb6a665275d
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The SmartHome App is a [Flutter](https://flutter.dev)-based mobile application designed to provide a user-friendly interface for controlling and monitoring your smart home devices. This app allows you to view a virtual representation of your smart home layout and read data from devices connected to a Raspberry Pi-based home automation system.
